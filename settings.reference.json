@@ -1,0 +1,24 @@
+{
+  "model": "sonnet",
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "frontend-design@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "42crunch-api-security-testing@claude-plugins-official": true,
+    "ai-plugins@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "modern-web-guidance@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "vercel@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    }
+  },
+  "agentPushNotifEnabled": true
+}
