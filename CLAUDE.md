@@ -5,3 +5,7 @@ When the user types `/graphify`, use the installed graphify skill or instruction
 # money-leak-audit
 - **money-leak-audit** (`~/.claude/skills/money-leak-audit/SKILL.md`) - audit a project for hosting-bill, accessibility, database RLS, messaging-consent and compute-cap problems. Trigger: `/money-leak-audit`
 Run it (or offer to) on every project before it goes live and when starting a new one; keep the output minimal.
+
+# web-security-audit
+- **web-security-audit** (`~/.claude/skills/web-security-audit/SKILL.md`) - checklist from my Web Security Guide: passwords, sessions, CSRF, roles and ownership, 2FA, passkeys, tokens, headers, rate limits. Trigger: `/web-security-audit`
+Run it (or offer to) on every project that has login, user data or an API, before it goes live and when starting one; keep the output minimal.

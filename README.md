@@ -2,7 +2,7 @@
 
 My Claude Code setup, so a new PC gets the same skills and plugins.
 
-- `skills/`: my own skills (`graphify`, `money-leak-audit`)
+- `skills/`: my own skills (`graphify`, `money-leak-audit`, `web-security-audit`)
 - `CLAUDE.md`: my global instructions
 - `install.ps1` (Windows) / `install.sh` (Git Bash, macOS, Linux): copies the skills, adds the two plugin marketplaces and installs my 10 plugins
 
