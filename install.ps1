@@ -8,6 +8,14 @@ if (Test-Path "$dest\CLAUDE.md") { Write-Host "$dest\CLAUDE.md already exists: m
 
 claude plugin marketplace add anthropics/claude-plugins-official
 claude plugin marketplace add DietrichGebert/ponytail
-$plugins = "ponytail@ponytail","frontend-design@claude-plugins-official","code-review@claude-plugins-official","42crunch-api-security-testing@claude-plugins-official","ai-plugins@claude-plugins-official","playwright@claude-plugins-official","modern-web-guidance@claude-plugins-official","context7@claude-plugins-official","typescript-lsp@claude-plugins-official","vercel@claude-plugins-official"
+claude plugin marketplace add thedotmack/claude-mem
+$plugins = "ponytail@ponytail","frontend-design@claude-plugins-official","code-review@claude-plugins-official","42crunch-api-security-testing@claude-plugins-official","ai-plugins@claude-plugins-official","playwright@claude-plugins-official","modern-web-guidance@claude-plugins-official","context7@claude-plugins-official","typescript-lsp@claude-plugins-official","vercel@claude-plugins-official","claude-mem@thedotmack"
 foreach ($p in $plugins) { claude plugin install $p; if ($LASTEXITCODE -ne 0) { Write-Host "could not install $p" } }
+
+# Local tools (not plugins): OmniRoute (AI router, needs Node) and Headroom (context compression proxy, needs Python)
+npm install -g omniroute; if ($LASTEXITCODE -ne 0) { Write-Host "could not install omniroute (needs Node.js)" }
+if (Get-Command uv -ErrorAction SilentlyContinue) { uv tool install --python 3.13 "headroom-ai[all]" } else { pip install "headroom-ai[all]" }
+if ($LASTEXITCODE -ne 0) { Write-Host "could not install headroom (needs uv or Python)" }
+
 Write-Host "Done. Restart Claude Code."
+Write-Host "Then: start OmniRoute with 'omniroute' and connect a provider in its dashboard; launch Claude through Headroom with 'headroom wrap claude'."
