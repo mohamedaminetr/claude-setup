@@ -9,3 +9,10 @@ Run it (or offer to) on every project before it goes live and when starting a ne
 # web-security-audit
 - **web-security-audit** (`~/.claude/skills/web-security-audit/SKILL.md`) - checklist from my Web Security Guide: passwords, sessions, CSRF, roles and ownership, 2FA, passkeys, tokens, headers, rate limits. Trigger: `/web-security-audit`
 Run it (or offer to) on every project that has login, user data or an API, before it goes live and when starting one; keep the output minimal.
+
+# claude-automation-recommender
+- **claude-automation-recommender** (`~/.claude/skills/claude-automation-recommender/SKILL.md`) - Anthropic's Claude Code Setup: reads a codebase and recommends hooks, subagents, skills, plugins and MCP servers (read-only). Trigger: `/claude-automation-recommender`
+
+# task-observer
+- **task-observer** (`~/.claude/skills/task-observer/SKILL.md`) - watches work sessions and turns corrections and repeated friction into proposed skill improvements (you approve each one). Trigger: `/task-observer`
+Keep its observation log in `~/.claude/skill-observations/`.

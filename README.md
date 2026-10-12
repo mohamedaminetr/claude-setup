@@ -4,7 +4,7 @@
 
 My Claude Code setup, so a new PC gets the same skills and plugins.
 
-- `skills/`: my own skills (`graphify`, `money-leak-audit`, `web-security-audit`)
+- `skills/`: my skills (`graphify`, `money-leak-audit`, `web-security-audit`, plus `claude-automation-recommender` from Anthropic's Claude Code Setup plugin and `task-observer` from rebelytics/one-skill-to-rule-them-all)
 - `CLAUDE.md`: my global instructions
 - `settings.reference.json`: my Claude Code settings (model, enabled plugins, marketplaces), for reference only; the install scripts recreate the plugin part
 - `install.ps1` (Windows) / `install.sh` (Git Bash, macOS, Linux): copies the skills, adds the two plugin marketplaces and installs my 10 plugins
